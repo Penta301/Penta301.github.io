@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*  
+azul mas oscuro #1F2136
+*/
+
+.orange-ligth {
+  box-shadow: 1.2px 2.8px 2.2px rgba(241, 93, 105, 0.05),
+    2.9px 6.7px 5.3px rgba(241, 93, 105, 0.057),
+    5.4px 12.5px 10px rgba(241, 93, 105, 0.05),
+    9.6px 22.3px 17.9px rgba(241, 93, 105, 0.051),
+    18px 41.8px 33.4px rgba(241, 93, 105, 0.05),
+    43px 100px 80px rgba(241, 93, 105, 0.03);
+}
+
+.strong-shadow {
+  box-shadow: 1.2px 2.8px 2.2px rgba(51, 16, 16, 0.048),
+    2.9px 6.7px 5.3px rgba(0, 0, 0, 0.069),
+    5.4px 12.5px 10px rgba(0, 0, 0, 0.085),
+    9.6px 22.3px 17.9px rgba(0, 0, 0, 0.101),
+    18px 41.8px 33.4px rgba(0, 0, 0, 0.122), 43px 100px 80px rgba(0, 0, 0, 0.17);
+}
+
+.start-article {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.start-article > .overlay > img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: -100;
+  position: absolute;
+}
+
+.overlay::after {
+  content: "";
+  width: 100%;
+  height: 101%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.856);
+  position: absolute;
+  z-index: 100;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.centered-content > img {
+  border-radius: 50%;
+}
+
+.centered-content > h2 {
+  color: rgb(32, 136, 233);
+  font-size: 2rem;
+}
+
+.centered-content > p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.start-article > p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 5rem;
+}
+
+.start-article > p::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  border-bottom: 2px solid white;
+  position: absolute;
+  margin-top: 15px;
+  left: 0;
+  margin-left: 10px;
+}
+
+.information-section {
+  height: 60vh;
+  width: 100%;
+  background-color: #1f2233;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.about-me {
+  width: 100%;
+  padding: 4.5em;
+  display: flex;
+  gap: 2em;
+}
+
+.about-me > img {
+  border-radius: 10px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+
+.subtitle {
+  color: #f15d69;
+  font-size: 1.2rem;
+}
+
+.title-section {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.title-section::before {
+  content: "";
+  border-bottom: 2px solid #f15d69;
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.text-content > p {
+  color: white;
+  text-align: justify;
+}
+
+.text-content > button {
+  border: none;
+  color: white;
+  background-color: #f15d69;
+  width: 150px;
+  height: 35px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.projects-section {
+  min-height: 40vh;
+  background-color: #23283c;
+}
+
+.projects-article {
+  padding: 4.5em;
+}
+
+.cards-container {
+  display: flex;
+  margin-top: 1.5em;
+  gap: 10%;
+}
+
+.card-project {
+  border: 1px solid #f15d69;
+  padding: 1.3em;
+  width: 300px;
+}
+
+.card-project > img {
+  margin-bottom: 20px;
+}
+
+.card-project > h2 {
+  color: white;
+  font-weight: 400;
+}
+
+.card-project > p {
+  color: rgb(156, 156, 156);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.card-project > a {
+  text-decoration: none;
+  color: #f15d69;
+  transition: all ease-out 0.3s;
+}
+
+.card-project > a:hover {
+  border-bottom: 1px solid #f15d69;
+  color: white;
+  padding: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  .information-section {
+    height: 100vh;
+  }
+
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+
+  .text-content > p {
+    font-size: 1.2rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
